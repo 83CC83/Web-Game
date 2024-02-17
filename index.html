@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>小遊戲</title>
+    <style>
+      * {
+        padding: 0;
+        border: 0;
+        box-sizing: border-box;
+        background-color: black;
+      }
+      header nav ul {
+        display: flex;
+        list-style-type: none;
+      }
+      header nav ul li {
+        padding: 0.8rem 1.5rem;
+      }
+      nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 1.5rem;
+        font-weight: bold;
+        transition: all 0.3s ease;
+      }
+      nav ul li a:hover {
+        cursor: pointer;
+        font-size: 1.8rem;
+        font-weight: bolder;
+      }
+      #snakeGame {
+        margin-top: 1rem;
+        border: 8px solid lightblue;
+        float: left;
+        width: 48%;
+        text-align: center;
+        padding: 20px;
+        border-radius: 50px;
+      }
+      #ballGame {
+        margin-top: 1rem;
+        border: 8px solid lightblue;
+        float: right;
+        width: 48%;
+        text-align: center;
+        padding: 20px;
+        border-radius: 50px;
+      }
+      #myCanvas1,
+      #myCanvas2 {
+        border: 5px solid lightgreen;
+      }
+      h1 {
+        color: white;
+      }
+      .btn {
+        position: relative;
+        min-width: 130px;
+        background: transparent;
+        border: none;
+        border-radius: 50px;
+        font-size: 1rem;
+        font-weight: bold;
+        text-align: center;
+        text-decoration: none;
+        text-transform: uppercase;
+        padding: 2px 4px;
+        margin-top: -2rem;
+      }
+      .btn span {
+        color: #ffffff;
+        mix-blend-mode: difference;
+      }
+      .btn span:hover {
+        cursor: pointer;
+        font-size: 1.2rem;
+        text-decoration: underline;
+      }
+      .btn:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 60px;
+        height: 130%;
+        border-radius: 50px;
+        background: #ffd1d8;
+        transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      }
+      .btn:hover:before {
+        background: #ffd1d8;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <header>
+    <nav>
+      <ul>
+        <li>
+          <a href="#">首頁</a>
+        </li>
+        <li>
+          <a href="./貪食蛇/index.html">貪食蛇</a>
+        </li>
+        <li>
+          <a href="./彈跳球/index.html">彈跳球</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <body>
+    <div id="snakeGame" style="white-space: pre-line">
+      <h1>1</h1>
+      <canvas
+        id="myCanvas1"
+        width="300px"
+        height="300px"
+        style="background-color: black"
+      >
+      </canvas>
+      <button
+        id="snakeBTN"
+        class="btn"
+        onclick="location.href=('./貪食蛇/index.html')"
+      >
+        <span>開始遊戲</span>
+      </button>
+    </div>
+    <div id="ballGame" style="white-space: pre-line">
+      <h1>2</h1>
+      <canvas
+        id="myCanvas2"
+        width="400px"
+        height="300px"
+        style="background-color: black"
+      ></canvas>
+      <button
+        id="ballBTN"
+        class="btn"
+        onclick="location.href=('./彈跳球/index.html')"
+      >
+        <span>開始遊戲</span>
+      </button>
+    </div>
+    <script src="./app.js"></script>
+  </body>
+</html>
